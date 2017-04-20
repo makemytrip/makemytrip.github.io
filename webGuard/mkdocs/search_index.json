@@ -1,0 +1,104 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "webGuard\n\n\nIntroduction\n\n\nwebGuard is a Web Application Testing tool that helps find security vulnerabilities in your applications. webGuard uses OWASP ZAP as the backend and provides an easy to use intuitive User Interface to test an application. webGuard also has a robust REST API that can be used to hook up into build automation tools like Jenkins.\n\n\nArchitecture\n\n\nwebGuard works on separate Web and ZAP layer. This ensures a scalable architecture to cater to increasing load. Multiple ZAP Servers can be spawned that work behind a single Web Server seamlessly and are managed to distribute load across these servers. Please refer to the image below for an overview of the architecture.\n\n\nInstallation\n\n\nwebGuard can be installed using the automated installer located in the GitHub repository \nhere\n. To install the components, please follow the instructions below:\n\n\n\n\n\n\nClone this git repository:\n    \ngit clone https://github.com/makemytrip/webGuard.git\n\n\n\n\n\n\nRun the install script by using the following command:\n    \n./install.sh\n\n\n\n\n\n\nOn the installer screen, select the desired component to be installed, either Web Server or ZAP Server.\n\n\n\n\n\n\nDepending on the type of installation, you might be prompted to enter more information. For e.g., when installing the ZAP Server you will be prompted to enter the Web Server IP for registering the ZAP Server. \nPlease Note\n: It is required to have the Web Server installed and running before installing a ZAP Server.\n\n\n\n\n\n\nOnce installation is complete, point your browser to http://X.X.X.X (where X.X.X.X is the server IP where the Web Server was installed) to access webGuard GUI and http://X.X.X.X/admin for admin panel for Local user management.\n\n\n\n\n\n\nConfiguration\n\n\nLogin Method\n\n\nwebGuard supports 2 methods for authentication.\n\n\n\n\nLocal DB\n\n\nLDAP\n\n\n\n\nBy default, the Local DB method is activated and uses the local MySQL database installed during setup to authenticate users. When this method is activated, webGuard serves as a self registration portal, where the user can register a username and password to login. There's no configuration for this method, except for a single variable in \nserver/settings.py\n file:\n\n\n# Login Method and Configuration\nLOGIN_METHOD = \nLOCAL\n\n\n\n\n\nWhen using LDAP Login, there is no registration option, as webGuard expects users list to be populated in the AD of the organization. If LDAP mode is selected, following variables need to be populated to properly authenticate in AD in the \nserver/settings.py\n file:\n\n\n# Login Method and Configuration\nLOGIN_METHOD           = \nLDAP\n\nLOGIN_LDAP_SERVER      = \n10.0.0.2\n\nLOGIN_LDAP_PORT        = 389\nLOGIN_LDAP_DOMAIN_NAME = \ndomain\n\n\n\n\n\nEmail Settings\n\n\nwebGuard can mail vulnerability reports to user email IDs. For a mail to be successfully sent, following variables need to be populated in \nserver/settings.py\n:\n\n\n# Email Server Settings\nEMAIL_HOST       = \nmailserver.domain.com\n\nEMAIL_PORT       = 25\nEMAIL_FROM_EMAIL = \nwebguard@domain.com\n\n\n\n\n\nZAP Server Settings\n\n\nwebGuard manages ZAP Instances running on servers by managing their memory utilization. By defining thresholds, webGuard will ensure that memory doesn't run out on servers and instances cannot be launched by users more than the specified limit. Following variables can be configured as desired:\n\n\n# ZAP Memory and Instance count settings\nZAP_SERVER_MIN_FREE_MEMORY_THRESHOLD = 512 # Minimum memory that needs to be free on ZAP Server to start a ZAP Instance (in MegaBytes)\nZAP_MULTIPLE_ALLOWED = True # Allow or Disable running multiple ZAP Instances per user\nZAP_MULTIPLE_MAX_COUNT = 5 # if the above variable is set to True, how many maximum instances can be runper user\n\n\n\n\nUsage\n\n\nFor a detailed walkthrough of the application please refer the following \nyoutube video\n.\n\n\nAPI Documentation\n\n\nwebGuard is built up on a robust REST API that can be utilized for integration into automated build systems like Jenkins. The documentation for this API is available \nhere\n.\n\n\nLicense\n\n\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. \nhttp://www.gnu.org/licenses/\n.\n\n\n\n\nAuthors\n\n\n\n\nKunal Aggarwal\n\n\nAvinash Jain", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#webguard", 
+            "text": "", 
+            "title": "webGuard"
+        }, 
+        {
+            "location": "/#introduction", 
+            "text": "webGuard is a Web Application Testing tool that helps find security vulnerabilities in your applications. webGuard uses OWASP ZAP as the backend and provides an easy to use intuitive User Interface to test an application. webGuard also has a robust REST API that can be used to hook up into build automation tools like Jenkins.", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/#architecture", 
+            "text": "webGuard works on separate Web and ZAP layer. This ensures a scalable architecture to cater to increasing load. Multiple ZAP Servers can be spawned that work behind a single Web Server seamlessly and are managed to distribute load across these servers. Please refer to the image below for an overview of the architecture.", 
+            "title": "Architecture"
+        }, 
+        {
+            "location": "/#installation", 
+            "text": "webGuard can be installed using the automated installer located in the GitHub repository  here . To install the components, please follow the instructions below:    Clone this git repository:\n     git clone https://github.com/makemytrip/webGuard.git    Run the install script by using the following command:\n     ./install.sh    On the installer screen, select the desired component to be installed, either Web Server or ZAP Server.    Depending on the type of installation, you might be prompted to enter more information. For e.g., when installing the ZAP Server you will be prompted to enter the Web Server IP for registering the ZAP Server.  Please Note : It is required to have the Web Server installed and running before installing a ZAP Server.    Once installation is complete, point your browser to http://X.X.X.X (where X.X.X.X is the server IP where the Web Server was installed) to access webGuard GUI and http://X.X.X.X/admin for admin panel for Local user management.", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/#configuration", 
+            "text": "", 
+            "title": "Configuration"
+        }, 
+        {
+            "location": "/#login-method", 
+            "text": "webGuard supports 2 methods for authentication.   Local DB  LDAP   By default, the Local DB method is activated and uses the local MySQL database installed during setup to authenticate users. When this method is activated, webGuard serves as a self registration portal, where the user can register a username and password to login. There's no configuration for this method, except for a single variable in  server/settings.py  file:  # Login Method and Configuration\nLOGIN_METHOD =  LOCAL   When using LDAP Login, there is no registration option, as webGuard expects users list to be populated in the AD of the organization. If LDAP mode is selected, following variables need to be populated to properly authenticate in AD in the  server/settings.py  file:  # Login Method and Configuration\nLOGIN_METHOD           =  LDAP \nLOGIN_LDAP_SERVER      =  10.0.0.2 \nLOGIN_LDAP_PORT        = 389\nLOGIN_LDAP_DOMAIN_NAME =  domain", 
+            "title": "Login Method"
+        }, 
+        {
+            "location": "/#email-settings", 
+            "text": "webGuard can mail vulnerability reports to user email IDs. For a mail to be successfully sent, following variables need to be populated in  server/settings.py :  # Email Server Settings\nEMAIL_HOST       =  mailserver.domain.com \nEMAIL_PORT       = 25\nEMAIL_FROM_EMAIL =  webguard@domain.com", 
+            "title": "Email Settings"
+        }, 
+        {
+            "location": "/#zap-server-settings", 
+            "text": "webGuard manages ZAP Instances running on servers by managing their memory utilization. By defining thresholds, webGuard will ensure that memory doesn't run out on servers and instances cannot be launched by users more than the specified limit. Following variables can be configured as desired:  # ZAP Memory and Instance count settings\nZAP_SERVER_MIN_FREE_MEMORY_THRESHOLD = 512 # Minimum memory that needs to be free on ZAP Server to start a ZAP Instance (in MegaBytes)\nZAP_MULTIPLE_ALLOWED = True # Allow or Disable running multiple ZAP Instances per user\nZAP_MULTIPLE_MAX_COUNT = 5 # if the above variable is set to True, how many maximum instances can be runper user", 
+            "title": "ZAP Server Settings"
+        }, 
+        {
+            "location": "/#usage", 
+            "text": "For a detailed walkthrough of the application please refer the following  youtube video .", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/#api-documentation", 
+            "text": "webGuard is built up on a robust REST API that can be utilized for integration into automated build systems like Jenkins. The documentation for this API is available  here .", 
+            "title": "API Documentation"
+        }, 
+        {
+            "location": "/#license", 
+            "text": "This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.  http://www.gnu.org/licenses/ .", 
+            "title": "License"
+        }, 
+        {
+            "location": "/#authors", 
+            "text": "Kunal Aggarwal  Avinash Jain", 
+            "title": "Authors"
+        }, 
+        {
+            "location": "/api/", 
+            "text": "API Documentation\n\n\nThis document serves as the API Reference Guide for webGuard.\n\n\nAuthentication\n\n\nLogin and Registration\n\n\nAll APIs are authenticated and need a session token to perform tasks. Following is the endpoint to login or register in webGuard.\n\n\n\n\n\n\n\n\nKey\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nMethod\n\n\nPOST\n\n\n\n\n\n\nEndpoint\n\n\n/api/login\n\n\n\n\n\n\nRequired Parameters\n\n\nusername, password, action\n\n\n\n\n\n\n\n\nThe parameter \naction\n can be either one of \nregister\n or \nlogin\n.\n\n\nSample Request\n\n\nPOST /api/login HTTP/1.1\n\nusername=wUser\npassword=wPassword\naction=login\n\n\n\n\nSample Response\n\n\nHTTP/1.1 200 OK\nContent-Type: application/json\nSet-Cookie:  sessionid=tjnsv3q1shc35kryz5ea3alzz0x54wl8;\n\n{\n    \nstatus\n: true, \n    \nmessage\n: \nLogin Success\n\n}\n\n\n\n\nLogout\n\n\nTo destroy the session and stop all running ZAP Instances linked to the session, a logout call needs to be made.\n\n\n\n\n\n\n\n\nKey\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nMethod\n\n\nGET\n\n\n\n\n\n\nEndpoint\n\n\n/api/logout\n\n\n\n\n\n\n\n\nSample Request\n\n\nGET /api/logout HTTP/1.1\nCookie: sessionid=tjnsv3q1shc35kryz5ea3alzz0x54wl8;\n\n\n\n\nSample Response\n\n\nHTTP/1.1 200 OK\nContent-Type: application/json\n\n{\n    \nmessage\n: \nLogged Out\n\n}\n\n\n\n\nZAP Instances\n\n\nFollowing set of APIs provide access to starting, stopping and listing running ZAP Instances for the current session.\n\n\nStart ZAP Instance", 
+            "title": "API Docs"
+        }, 
+        {
+            "location": "/api/#api-documentation", 
+            "text": "This document serves as the API Reference Guide for webGuard.", 
+            "title": "API Documentation"
+        }, 
+        {
+            "location": "/api/#authentication", 
+            "text": "", 
+            "title": "Authentication"
+        }, 
+        {
+            "location": "/api/#login-and-registration", 
+            "text": "All APIs are authenticated and need a session token to perform tasks. Following is the endpoint to login or register in webGuard.     Key  Description      Method  POST    Endpoint  /api/login    Required Parameters  username, password, action     The parameter  action  can be either one of  register  or  login .  Sample Request  POST /api/login HTTP/1.1\n\nusername=wUser password=wPassword action=login  Sample Response  HTTP/1.1 200 OK\nContent-Type: application/json\nSet-Cookie:  sessionid=tjnsv3q1shc35kryz5ea3alzz0x54wl8;\n\n{\n     status : true, \n     message :  Login Success \n}", 
+            "title": "Login and Registration"
+        }, 
+        {
+            "location": "/api/#logout", 
+            "text": "To destroy the session and stop all running ZAP Instances linked to the session, a logout call needs to be made.     Key  Description      Method  GET    Endpoint  /api/logout     Sample Request  GET /api/logout HTTP/1.1\nCookie: sessionid=tjnsv3q1shc35kryz5ea3alzz0x54wl8;  Sample Response  HTTP/1.1 200 OK\nContent-Type: application/json\n\n{\n     message :  Logged Out \n}", 
+            "title": "Logout"
+        }, 
+        {
+            "location": "/api/#zap-instances", 
+            "text": "Following set of APIs provide access to starting, stopping and listing running ZAP Instances for the current session.", 
+            "title": "ZAP Instances"
+        }, 
+        {
+            "location": "/api/#start-zap-instance", 
+            "text": "", 
+            "title": "Start ZAP Instance"
+        }
+    ]
+}

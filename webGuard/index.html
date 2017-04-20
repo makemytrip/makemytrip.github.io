@@ -1,0 +1,576 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="./assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.5.4">
+    
+    
+      
+        <title>webGuard</title>
+      
+    
+    
+      <script src="./assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="./assets/stylesheets/application-b1a1975878.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="." title="webGuard" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Home
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/makemytrip/webGuard" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    webGuard
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/makemytrip/webGuard" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Home
+      </label>
+    
+    <a href="." title="Home" class="md-nav__link md-nav__link--active">
+      Home
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" title="Architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" title="Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login-method" title="Login Method" class="md-nav__link">
+    Login Method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#email-settings" title="Email Settings" class="md-nav__link">
+    Email Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zap-server-settings" title="ZAP Server Settings" class="md-nav__link">
+    ZAP Server Settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-documentation" title="API Documentation" class="md-nav__link">
+    API Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" title="License" class="md-nav__link">
+    License
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authors" title="Authors" class="md-nav__link">
+    Authors
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="api/" title="API Docs" class="md-nav__link">
+      API Docs
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" title="Architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" title="Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login-method" title="Login Method" class="md-nav__link">
+    Login Method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#email-settings" title="Email Settings" class="md-nav__link">
+    Email Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zap-server-settings" title="ZAP Server Settings" class="md-nav__link">
+    ZAP Server Settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-documentation" title="API Documentation" class="md-nav__link">
+    API Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" title="License" class="md-nav__link">
+    License
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authors" title="Authors" class="md-nav__link">
+    Authors
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/makemytrip/webGuard/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
+                
+                <h1 id="webguard">webGuard</h1>
+<h2 id="introduction">Introduction</h2>
+<p>webGuard is a Web Application Testing tool that helps find security vulnerabilities in your applications. webGuard uses OWASP ZAP as the backend and provides an easy to use intuitive User Interface to test an application. webGuard also has a robust REST API that can be used to hook up into build automation tools like Jenkins.</p>
+<h2 id="architecture">Architecture</h2>
+<p>webGuard works on separate Web and ZAP layer. This ensures a scalable architecture to cater to increasing load. Multiple ZAP Servers can be spawned that work behind a single Web Server seamlessly and are managed to distribute load across these servers. Please refer to the image below for an overview of the architecture.</p>
+<h2 id="installation">Installation</h2>
+<p>webGuard can be installed using the automated installer located in the GitHub repository <a href="https://github.com/makemytrip/webGuard">here</a>. To install the components, please follow the instructions below:</p>
+<ol>
+<li>
+<p>Clone this git repository:
+    <code>git clone https://github.com/makemytrip/webGuard.git</code></p>
+</li>
+<li>
+<p>Run the install script by using the following command:
+    <code>./install.sh</code></p>
+</li>
+<li>
+<p>On the installer screen, select the desired component to be installed, either Web Server or ZAP Server.</p>
+</li>
+<li>
+<p>Depending on the type of installation, you might be prompted to enter more information. For e.g., when installing the ZAP Server you will be prompted to enter the Web Server IP for registering the ZAP Server. <em>Please Note</em>: It is required to have the Web Server installed and running before installing a ZAP Server.</p>
+</li>
+<li>
+<p>Once installation is complete, point your browser to http://X.X.X.X (where X.X.X.X is the server IP where the Web Server was installed) to access webGuard GUI and http://X.X.X.X/admin for admin panel for Local user management.</p>
+</li>
+</ol>
+<h2 id="configuration">Configuration</h2>
+<h3 id="login-method">Login Method</h3>
+<p>webGuard supports 2 methods for authentication.</p>
+<ol>
+<li>Local DB</li>
+<li>LDAP</li>
+</ol>
+<p>By default, the Local DB method is activated and uses the local MySQL database installed during setup to authenticate users. When this method is activated, webGuard serves as a self registration portal, where the user can register a username and password to login. There's no configuration for this method, except for a single variable in <code>server/settings.py</code> file:</p>
+<pre><code class="python"># Login Method and Configuration
+LOGIN_METHOD = &quot;LOCAL&quot;
+</code></pre>
+
+<p>When using LDAP Login, there is no registration option, as webGuard expects users list to be populated in the AD of the organization. If LDAP mode is selected, following variables need to be populated to properly authenticate in AD in the <code>server/settings.py</code> file:</p>
+<pre><code class="python"># Login Method and Configuration
+LOGIN_METHOD           = &quot;LDAP&quot;
+LOGIN_LDAP_SERVER      = &quot;10.0.0.2&quot;
+LOGIN_LDAP_PORT        = 389
+LOGIN_LDAP_DOMAIN_NAME = &quot;domain&quot;
+</code></pre>
+
+<h3 id="email-settings">Email Settings</h3>
+<p>webGuard can mail vulnerability reports to user email IDs. For a mail to be successfully sent, following variables need to be populated in <code>server/settings.py</code>:</p>
+<pre><code class="python"># Email Server Settings
+EMAIL_HOST       = &quot;mailserver.domain.com&quot;
+EMAIL_PORT       = 25
+EMAIL_FROM_EMAIL = &quot;webguard@domain.com&quot;
+</code></pre>
+
+<h3 id="zap-server-settings">ZAP Server Settings</h3>
+<p>webGuard manages ZAP Instances running on servers by managing their memory utilization. By defining thresholds, webGuard will ensure that memory doesn't run out on servers and instances cannot be launched by users more than the specified limit. Following variables can be configured as desired:</p>
+<pre><code class="python"># ZAP Memory and Instance count settings
+ZAP_SERVER_MIN_FREE_MEMORY_THRESHOLD = 512 # Minimum memory that needs to be free on ZAP Server to start a ZAP Instance (in MegaBytes)
+ZAP_MULTIPLE_ALLOWED = True # Allow or Disable running multiple ZAP Instances per user
+ZAP_MULTIPLE_MAX_COUNT = 5 # if the above variable is set to True, how many maximum instances can be runper user
+</code></pre>
+
+<h2 id="usage">Usage</h2>
+<p>For a detailed walkthrough of the application please refer the following <a href="https://www.youtube.com/">youtube video</a>.</p>
+<h2 id="api-documentation">API Documentation</h2>
+<p>webGuard is built up on a robust REST API that can be utilized for integration into automated build systems like Jenkins. The documentation for this API is available <a href="./api/">here</a>.</p>
+<h2 id="license">License</h2>
+<p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+<p><a href="https://www.gnu.org/licenses/gpl.txt"><img alt="" src="https://www.gnu.org/graphics/gplv3-127x51.png" /></a></p>
+<h2 id="authors">Authors</h2>
+<ul>
+<li><a href="https://twitter.com/KunalAggarwal92">Kunal Aggarwal</a></li>
+<li><a href="https://twitter.com/logicbomb_1">Avinash Jain</a></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="api/" title="API Docs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                API Docs
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            © MakeMyTrip 2017
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="./assets/javascripts/application-0b7df094bf.js"></script>
+      <script>app.initialize({url:{base:"."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
